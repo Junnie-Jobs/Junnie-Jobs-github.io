@@ -1,0 +1,23 @@
+package birthday;
+
+public class BirthDayTest {
+
+	public static void main(String[] args) {
+		
+		BirthDay c1 = new BirthDay(2000, 2, 29);
+		BirthDay c2 = new BirthDay(2014, 7, 10);
+		BirthDay c3 = new BirthDay(2100, 2, 29);
+		
+		printResult(c1);
+		printResult(c2);
+		printResult(c3);
+	}
+	
+	public static void printResult(BirthDay date){
+		if(date.IsVaildDate())
+			System.out.println(date.getYear() + "-" + date.getMonth() + "-" + date.getDay() + " is leapyear.");
+		else 
+			System.out.println(date.getYear() + "-" + date.getMonth() + "-" + date.getDay() + " is NOT leapyear.");
+	}
+
+}
